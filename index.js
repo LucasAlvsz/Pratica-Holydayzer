@@ -32,7 +32,7 @@ app.get("/is-today-holiday", (req, res) => {
 	})
 })
 
-app.get("/is-today-holiday/:month", (req, res) => {
+app.get("/holidays/:month", (req, res) => {
 	const today = new Date()
 	const monthId = req.params.month
 	let holidaysList = holidays.filter(holiday => {
