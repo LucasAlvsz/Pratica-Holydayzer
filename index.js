@@ -27,7 +27,7 @@ app.get("/is-today-holiday", (req, res) => {
 	console.log(today.toLocaleDateString())
 	holidays.forEach(holiday => {
 		if (holiday.date === today.toLocaleDateString())
-			res.send("Sim, hoje é " + today.toLocaleDateString())
+			res.send("Sim, hoje é " + holiday.name)
 		else res.send("Não, hoje não é feriado")
 	})
 })
